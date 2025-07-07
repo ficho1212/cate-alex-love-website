@@ -1,125 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CATE X ALEX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ALEX X CATE</title>
   <style>
     body {
       background-color: #fff0f5;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 50px 20px;
     }
-
     h1 {
-      color: crimson;
       font-size: 48px;
-      margin-bottom: 20px;
+      color: crimson;
+      margin-bottom: 40px;
     }
-
-    .big-heart {
-      position: relative;
-      width: 300px;
-      height: 270px;
-      margin: 0 auto 30px;
-    }
-
-    .big-heart::before,
-    .big-heart::after {
-      content: "";
-      position: absolute;
-      width: 150px;
-      height: 240px;
-      background: red;
-      border-radius: 75px 75px 0 0;
-      top: 0;
-    }
-
-    .big-heart::before {
-      left: 0;
-      transform: rotate(-45deg);
-      transform-origin: bottom right;
-    }
-
-    .big-heart::after {
-      right: 0;
-      transform: rotate(45deg);
-      transform-origin: bottom left;
-    }
-
-    .heart-images {
-      position: absolute;
-      top: 90px;
-      left: 50%;
-      transform: translateX(-50%);
+    .container {
       display: flex;
-      gap: 20px;
-      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
-
-    .heart {
-      width: 100px;
-      height: 90px;
-      position: relative;
-      background: pink;
-      transform: rotate(-45deg);
-    }
-
-    .heart::before,
-    .heart::after {
-      content: "";
-      position: absolute;
-      width: 100px;
-      height: 90px;
-      background: pink;
-      border-radius: 50%;
-    }
-
-    .heart::before {
-      top: -50px;
-      left: 0;
-    }
-
-    .heart::after {
-      top: 0;
-      left: 50px;
-    }
-
-    .heart img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100px;
-      height: 90px;
+    .heart-img {
+      width: 150px;
+      height: 150px;
       object-fit: cover;
-      clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0 35%);
-      transform: rotate(45deg);
+      border-radius: 0; /* no rounding needed, images are already hearts */
     }
-
+    .x {
+      font-size: 50px;
+      font-weight: bold;
+      color: black;
+      user-select: none;
+      line-height: 150px;
+    }
     .caption {
-      font-size: 18px;
+      margin-top: 30px;
+      font-size: 20px;
       color: #444;
-      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
-  <h1>CATE X ALEX</h1>
-
-  <div class="big-heart">
-    <div class="heart-images">
-      <div class="heart">
-        <img src="https://imgur.com/fgnbLlc" alt="Cate" />
-      </div>
-      <div class="heart">
-        <img src="https://imgur.com/tW6RGBH" alt="Alex" />
-      </div>
-    </div>
+  <h1>ALEX X CATE</h1>
+  <div class="container">
+    <img src="images/alex.png" alt="Alex" class="heart-img" />
+    <div class="x">X</div>
+    <img src="images/cate.png" alt="Cate" class="heart-img" />
   </div>
-
   <div class="caption">they love each other very much</div>
-
 </body>
 </html>
